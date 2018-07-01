@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #container {
+      width: 600px;
+      height: 600px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <canvas id="container" width="600" height="600"></canvas>
+  </div>
+  <!-- <script src="/js/sprite-core.js"></script> -->
+  <script src="/js/spritejs.js"></script>
+  <script src="/js/sprite-extend-bmfont.js"></script>
+  <script src="/js/sprite.fnt.js"></script>
+  <script>
+    const context = document.getElementById('container').getContext('2d')
+    const {Layer, BMFont, Label} = spritejs
+
+    const layer = new Layer({context})
+    const s = new BMFont()
+    s.attr({
+      anchor: 0.5,
+      fontFace: 'Arial',
+      text: 'SpriteJS\nabVu',
+      // size: [100, 100],
+      pos: [300, 200],
+      border: {
+        width: 4,
+        color: 'red',
+      },
+      // lineHeight: 30,
+      // letterSpacing: 20,
+      textAlign: 'center',
+    })
+    layer.append(s)
+
+    const l = new Label('SpriteJS\nabVu')
+    l.attr({
+      font: 'italic 50px Arial',
+      pos: [300, 400],
+      border: {
+        width: 4,
+        color: 'red',
+      },
+    })
+    layer.append(l)
+  </script>
+</body>
+</html>
