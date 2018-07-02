@@ -134,6 +134,12 @@ class BMFontAttr extends Sprite.Attr {
 
 class BMFont extends Sprite {
   static Attr = BMFontAttr
+  constructor(attr) {
+    if(typeof attr === 'string') {
+      attr = {text: attr}
+    }
+    super(attr)
+  }
   get contentSize() {
     const [w, h] = super.contentSize
     const height = this.attr('height')

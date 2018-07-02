@@ -25,11 +25,10 @@
     const {Layer, BMFont, Label} = spritejs
 
     const layer = new Layer({context})
-    const s = new BMFont()
+    const s = new BMFont('SpriteJS\nabVu')
     s.attr({
       anchor: 0.5,
       fontFace: 'Arial',
-      text: 'SpriteJS\nabVu',
       // size: [100, 100],
       pos: [300, 200],
       border: {

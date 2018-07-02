@@ -17,8 +17,8 @@ node tools/generate.js fonts/testsprite.fnt
 ```
 
 ```html
-  <script src="/js/spritejs.js"></script>
-  <script src="https://s5.ssl.qhres.com/!c3488ce0/sprite-extend-bmfont.js"></script>
+  <script src="https://unpkg.com/spritejs/dist/spritejs.min.js"></script>
+  <script src="https://s5.ssl.qhres.com/!408aeef9/sprite-extend-bmfont.js"></script>
   <script src="/js/sprite.fnt.js"></script>
   <script>
     const context = document.getElementById('container').getContext('2d')
