@@ -83,12 +83,13 @@ pages.forEach((page) => {
     }
   }
 })
+const face = content.match(/face="(.+?)"/)[1]
+
+output.face = face
 
 const outputJSON = `${fontFile}.json`,
   outputJS = `${fontFile}.js`
 
 fs.writeFileSync(outputJSON, JSON.stringify(output))
-
-const face = content.match(/face="(.+?)"/)[1]
 
 fs.writeFileSync(outputJS, `spritejs.BMFont.fonts.${face} = ${JSON.stringify(output)}`)
