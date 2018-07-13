@@ -142,7 +142,7 @@ class BMFont extends Sprite {
   }
   get contentSize() {
     const [w, h] = super.contentSize
-    const height = this.attr('height')
+    const height = this.attrSize[1]
     if(height === '') {
       return [w, this.textHeight]
     }
